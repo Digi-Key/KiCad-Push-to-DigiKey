@@ -1,0 +1,35 @@
+{
+    "$schema": "https://go.kicad.org/pcm/schemas/v1",
+    "name": "Push to Digi-Key myLists",
+    "description": "Push components in the schematic to Digi-Key myLists for easy and quick part ordering.",
+    "description_full": "Push components in the schematic to Digi-Key myLists for easy and quick part ordering.",
+    "identifier": "internal.kicad.pushToDigiKeyMyLists",
+    "type": "plugin",
+    "author": {
+        "name": "Trung Ho",
+        "contact": {
+            "github": "https://www.digikey.com",
+            "web": "https://www.digikey.com",
+            "twitter": "https://www.digikey.com"
+        }
+    },
+    "maintainer": {
+        "name": "Trung Ho",
+        "contact": {
+            "github": "https://www.digikey.com",
+            "web": "https://www.digikey.com",
+            "twitter": "https://www.digikey.com"
+        }
+    },
+    "license": "MIT",
+    "resources": {
+        "homepage": "https://www.digikey.com"
+    },
+    "versions": [
+        {
+            "version": "0.0.6c4",
+            "status": "testing",
+            "kicad_version": "6.00"
+        }
+    ]
+}
