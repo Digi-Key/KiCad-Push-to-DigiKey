@@ -61,7 +61,8 @@ md['versions'][0].update({
     'install_size': uncompressed_size,
     'download_size': zip_size,
     'download_sha256': zip_sha256,
-    'download_url': 'https://example.com/{0}/PushForKiCad-{0}-pcm.zip'.format(md['versions'][0]['version'])
+    'download_url': 'https://github.com/Digi-Key/KiCad-Push-to-DigiKey/releases/download/'
+                    'v{0}/PushToDigiKeyMyLists-{0}-pcm.zip'.format(md['versions'][0]['version'])
 })
 
 with open('metadata.json', 'w') as of:
