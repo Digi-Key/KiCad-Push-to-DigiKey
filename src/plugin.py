@@ -335,7 +335,7 @@ class BOMFrame(wx.Frame):
 
 class DigiKeyMyListsPlugin(pcbnew.ActionPlugin):
     def __init__(self):
-        self.name = 'Push to Digi-Key myLists'
+        self.name = 'Push to DigiKey myLists'
         self.category = 'Manufacturing'
         self.pcbnew_icon_support = hasattr(self, 'show_toolbar_button')
         self.show_toolbar_button = True
@@ -343,7 +343,7 @@ class DigiKeyMyListsPlugin(pcbnew.ActionPlugin):
             os.path.dirname(__file__), 'toolbar_icon.png')
         self.dark_icon_file_name = os.path.join(
             os.path.dirname(__file__), 'toolbar_icon.png')
-        self.description = 'Push given parts to Digi-Key myLists for easy and fast part order.'
+        self.description = 'Push schematic components to Digi-Key myLists for easy and quick part ordering.'
 
     def Run(self):
         BOMFrame().Show()
