@@ -27,17 +27,16 @@ class PushThread(Thread):
 
         r = None
         try:
-            r = requests.post(base_api_url, json=json_data, params=params, verify=False)
+            r = requests.post(base_api_url, json=json_data, params=params, verify=True, timeout=10)
         except requests.exceptions.RequestException:
             self._post_event({'state': 'ERR_REQUESTS_EXCEPTION', 'api_url': base_api_url})
-        except:
+            return
+        except Exception:
             self._post_event({'state': 'ERR_SENDING_REQUEST', 'api_url': base_api_url})
+            return
 
         self._post_event({'state': 'Preparing the webpage...', 'gauge_int': 70})
         time.sleep(0.5)
-
-        print('\nStatus Code: ', r.status_code)
-        print('\nr.text data: ', r.text)
 
         returned_short_url = ''
         try:
@@ -57,6 +56,7 @@ class PushThread(Thread):
             wx.LaunchDefaultBrowser(returned_short_url)
         except:
             self._post_event({'state': 'CANNOT_LAUNCH_DEFAULT_BROWSER', 'url': returned_short_url})
+            return
         self._post_event({'state': 'Finished'})  # keyword: "Finished", to close the wxForm.
 
     def _post_event(self, event_data):
