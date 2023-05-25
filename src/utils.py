@@ -50,16 +50,20 @@ def to_string(_list):
 
 
 def parse_property_line(line: str):
+    # KiCad 6.0
     # '    (property "Datasheet" "~" (id 3) (at 44.45 63.5 0)'
-    # --> name: "Datasheet", value: "~", id: '3'
-    property_line_regex = re.compile(r'^\s{4}\(property "(.*)" "(.*)" \(id (\d+)\)')
+    # --> name: "Datasheet", value: "~"
+
+    # KiCad 7.0
+    # '    (property "Reference" "R2" (at 90.17 80.645 0)'
+    # --> name: "Reference", value: "R2"
+    property_line_regex = re.compile(r'^\s{4}\(property "(.*)" "(.*)"')
     if not property_line_regex.search(line):
         return
-    _name, _value, _property_id = property_line_regex.findall(line)[0]
+    _name, _value = property_line_regex.findall(line)[0]
     return {
         'name': _name,
         'value': _value,
-        # 'property_id': _property_id  # it almost has no use
     }
 
 
