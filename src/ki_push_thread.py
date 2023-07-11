@@ -18,7 +18,15 @@ class PushThread(Thread):
     def run(self):
         base_api_url = 'https://www.digikey.com/mylists/api/thirdparty'
         json_data = self.json_data
-        params = {'listName': self.list_name}
+
+        # This below variable helps myLists team keep track of projects that are using myLists API.
+        # Feel free to change it to your project name.
+        tags = 'KiCad'
+
+        params = {
+            'listName': self.list_name,
+            'tags': tags
+        }
 
         self._post_event({'state': 'Initializing...', 'gauge_int': 10})
         time.sleep(0.5)
