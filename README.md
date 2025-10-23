@@ -1,6 +1,6 @@
-# KiCad addon: Push parts to Digi-Key myLists
+# KiCad addon: Push parts to DigiKey myLists
 
-This addon helps you collect parts in your [KiCad](https://www.kicad.org/) schematic file and push them to Digi-Key [myLists](https://www.digikey.com/en/mylists/).
+This addon helps you collect parts in your [KiCad](https://www.kicad.org/) schematic file and push them to DigiKey [myLists](https://www.digikey.com/en/mylists/).
 
 > With myLists, you can calculate assemblies, find alternates, calculate attrition, and more.
 
@@ -14,11 +14,11 @@ This addon helps you collect parts in your [KiCad](https://www.kicad.org/) schem
 
 - Open the `PCB Editor` (not Schematic Editor), click the `Push to Digi-Key myLists` icon on the toolbar
 - In the dialog that opens, press the `Create DigiKey List` button
-- Parts will be pushed to Digi-Key myLists
+- Parts will be pushed to DigiKey myLists
 
 ![Plugin installed](images/plugin-installed.png)
 ![Plugin in PCB editor](images/plugin-in-PCB-editor.png)
-![Parts pushed to Digi-Key myLists](images/parts-pushed-todigikey-mylists.png)
+![Parts pushed to DigiKey myLists](images/parts-pushed-todigikey-mylists.png)
 
 ## Frequently Asked Questions
 
@@ -56,12 +56,12 @@ source:
 
 Q: Can I add some note to a part number?
 
-A: Yes. The last column - `Note` - is editable. Scroll the addon window all the way to the right to see this column. Double-click a row to edit, press Enter when you finish. `Note` will be sent to Digi-Key myLists as well.
+A: Yes. The last column - `Note` - is editable. Scroll the addon window all the way to the right to see this column. Double-click a row to edit, press Enter when you finish. `Note` will be sent to DigiKey myLists as well.
 
 
 Q: What is `Customer Reference` column for?
 
-A: It's for Digi-Key customer with a reference number. This column is not required, so you can leave it blank.
+A: It's for DigiKey customer with a reference number. This column is not required, so you can leave it blank.
 
 
 Q: May I reuse and modify the code?
